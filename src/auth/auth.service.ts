@@ -82,8 +82,8 @@ export class AuthService {
    
 }
 
-  findAll() {
-    return `This action returns all auth`;
+  async findAll() {
+    return await this.userModel.find();
   }
 
   findOne(id: number) {
