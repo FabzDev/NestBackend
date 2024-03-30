@@ -76,7 +76,7 @@ export class AuthService {
       if (err.code === 11000) {
         console.log(err);
 
-        throw new BadRequestException(`${createUserDto.email} does not exists`);
+        throw new BadRequestException(`${createUserDto.email} already exists`);
       }
       throw new InternalServerErrorException('Heavy error');
     }
